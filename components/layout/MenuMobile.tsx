@@ -33,7 +33,7 @@ const MenuMobile = () => {
                 {menuExpended && item.dropDownData?.map((subitem:NavbarItemType, index: number) =>(
                   
                   // <Link href={subitem.href}>{subitem.label}</Link>
-                  <div>{subitem.label}</div>
+                  <div key={index}>{subitem.label}</div>
                 ) )}
               </div>
             </li>

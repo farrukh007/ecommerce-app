@@ -62,7 +62,7 @@ export const Header = () => {
         <div className="hidden lg:flex justify-between items-center w-full">
           <ul className="flex font-medium text-base gap-x-8">
             {NavbarArray.map((item: NavbarItemType, index: number) => (
-              <li className="flex items-center gap-1 relative py-1 cursor-pointer group">
+              <li key={index} className="flex items-center gap-1 relative py-1 cursor-pointer group">
                 <Link href={item.href}>{item.label}</Link>
                 {item.isDropDown ? (
                   <HiOutlineChevronDown className="-rotate-180 group-hover:rotate-0 duration-300" />
@@ -70,7 +70,7 @@ export const Header = () => {
                   ""
                 )}
                 {item.isDropDown && (
-                  <div
+                  <div 
                     className={`invisible group-hover:visible absolute top-8 left-0 py-2 bg-white text-sm font-light min-w-[7.8rem]`}
                   >
                     <DropDown item={item} />
