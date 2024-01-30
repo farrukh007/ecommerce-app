@@ -18,7 +18,7 @@ const MenuMobile = () => {
         <ShoppingCart size={24} color="black" />
       </div>
       <div className="py-2 bg-white ">
-        {NavbarArray.map((item: NavbarItemType, index: number) => {
+        {NavbarArray.map((item: NavbarItemType, index) => {
           return (
             <li key={index} className="py-6 hover:bg-gray-200 list-none">
               <div onClick={()=> setMenuExpended(!menuExpended)} className="flex justify-center font-semibold mb-1">

@@ -14,8 +14,8 @@ export default function Page({ params }: { params: { id: number } }) {
 
   return (
     <div className="flex mt-16 py-10 flex-wrap">
-      {result.map((product) => (
-        <div key={product.id} className="flex justify-between gap-10">
+      {result.map((product, index) => (
+        <div key={index} className="flex justify-between gap-10">
           {/* Left Image */}
           <div>
             <Image
